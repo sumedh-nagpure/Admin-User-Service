@@ -1,0 +1,19 @@
+<h2>Service Request Status</h2>
+<table>
+    <tr>
+        <th>Type</th>
+        <th>Details</th>
+        <th>Status</th>
+        <th>Created At</th>
+        <th>Resolved At</th>
+    </tr>
+    {% for request in requests %}
+    <tr>
+        <td>{{ request.request_type }}</td>
+        <td>{{ request.details }}</td>
+        <td>{{ request.status }}</td>
+        <td>{{ request.created_at }}</td>
+        <td>{{ request.resolved_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
